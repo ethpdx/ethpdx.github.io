@@ -3,7 +3,7 @@ const config = require('./config');
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: config.siteTitle,
+    title: "ETH PDX MEETUP",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
