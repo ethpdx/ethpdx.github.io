@@ -23,20 +23,9 @@ class Layout extends Component {
     const { children } = this.props;
     const { isPreloaded } = this.state;
     return (
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
-              }
-            }
-          }
-        `}
-        render={data => (
           <>
             <Helmet
-              title={data.site.siteMetadata.title}
+              title="ETH PDX MEETUP"
               meta={[
                 { name: 'description', content: 'Eventually' },
                 { name: 'keywords', content: 'site, web' },
@@ -48,11 +37,9 @@ class Layout extends Component {
               {children}
             </div>
           </>
-        )}
-      />
-    );
-  }
-}
+      )}
+    }
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
